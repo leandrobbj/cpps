@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:45 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/13 03:18:43 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/13 14:40:19 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ class Contact {
 		Contact();
 		~Contact();
 		void create(std::string info[5]);
-		std::string getInfo(char c);
+		std::string getFirst();
+		std::string getLast();
+		std::string getNick();
+		std::string getNumber();
+		std::string getSecret();
 };
 
 #endif
-

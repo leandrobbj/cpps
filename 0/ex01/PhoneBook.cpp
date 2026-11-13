@@ -6,13 +6,13 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:30 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/13 03:36:57 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/13 16:19:27 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(): entries(0), contacts(){
+PhoneBook::PhoneBook(): oldest(0), entries(0), contacts(){
 	std::cout << "<PhoneBook constructor>\n";
 }
 
@@ -30,9 +30,11 @@ void PhoneBook::add() {
 	info[2] = strInput("Nick Name: ");
 	info[3] = strInput("Number: ");
 	info[4] = strInput("Dark Secret: ");
-	int i = entries % 8;
-	contacts[i].create(info);
-	entries++;
+	contacts[oldest].create(info);
+	std::cout << "Contact created!\n";
+	oldest = (oldest + 1) % 8;
+	if (entries < 8)
+		entries++;
 }
 
 void PhoneBook::search()
@@ -42,25 +44,22 @@ void PhoneBook::search()
 		std::cout << "error: phonebook empty\n";
 		return;
 	}
-	printPhoneBook();
+	printAll();
 	printContact();
 }
 
-void PhoneBook::printPhoneBook() {
+void PhoneBook::printAll() {
 	int	i = 0;
-	int	total = entries;
-	if (entries > 8)
-		total = 8;
 	std::cout << "                                  PhoneBook\n";
 	std::cout << "———————————————————————————————————————————\n";
 	std::cout << "     index| firstname|  lastname|  nickname\n";
 	std::cout << "-------------------------------------------\n";
-	while (i < total)
+	while (i < entries)
 	{
 		std::cout << std::setw(10) << i + 1  << '|';
-		std::cout << std::setw(10) << strFit(contacts[i].getInfo('f')) << '|';
-		std::cout << std::setw(10) << strFit(contacts[i].getInfo('l')) << '|';
-		std::cout << std::setw(10) << strFit(contacts[i].getInfo('n')) << '\n';
+		std::cout << std::setw(10) << strFit(contacts[i].getFirst()) << '|';
+		std::cout << std::setw(10) << strFit(contacts[i].getLast()) << '|';
+		std::cout << std::setw(10) << strFit(contacts[i].getNick()) << '\n';
 		i++;
 	}
 	std::cout << "———————————————————————————————————————————\n";
@@ -81,15 +80,16 @@ void PhoneBook::printContact() {
 			break;
 	}
 	int i = input[0] -'0' - 1;
-	std::cout << "\nFirst Name: " << contacts[i].getInfo('f') << '\n';
-	std::cout << "Last Name: " << contacts[i].getInfo('l') << '\n';
-	std::cout << "Nick Name: " << contacts[i].getInfo('n') << '\n';
-	std::cout << "Number: " << contacts[i].getInfo('0') << '\n';
-	std::cout << "Dark Secret: " << contacts[i].getInfo('s') << '\n';
+	std::cout << "\nFirst Name: " << contacts[i].getFirst() << '\n';
+	std::cout << "Last Name: " << contacts[i].getLast() << '\n';
+	std::cout << "Nick Name: " << contacts[i].getNick() << '\n';
+	std::cout << "Number: " << contacts[i].getNumber() << '\n';
+	std::cout << "Dark Secret: " << contacts[i].getSecret() << '\n';
 }
 
 void PhoneBook::printEntries(){
 	std::cout << "\nEntries: " << entries << "\n";
+	std::cout << "Older index: " << oldest << "\n";
 }
 
 void PhoneBook::fill() {
@@ -143,6 +143,7 @@ void PhoneBook::fill() {
 	info[4] = "Segredo 7";
 	contacts[7].create(info);
 	entries = 8;
+	oldest = 0;
 }
 
 static std::string strInput(std::string str)
