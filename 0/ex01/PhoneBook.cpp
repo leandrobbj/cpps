@@ -6,18 +6,20 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:30 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/13 16:19:27 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/13 16:46:29 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(): oldest(0), entries(0), contacts(){
-	std::cout << "<PhoneBook constructor>\n";
+	if (TEST)
+		std::cout << "<PhoneBook constructor>\n";
 }
 
 PhoneBook::~PhoneBook(){
-	std::cout << "\n<PhoneBook destructor>\n";
+	if (TEST)
+		std::cout << "\n<PhoneBook destructor>\n";
 }
 
 static std::string strInput(std::string str);
