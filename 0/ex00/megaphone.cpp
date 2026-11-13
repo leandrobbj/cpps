@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 14:05:35 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/06 19:22:46 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/13 16:56:58 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int	main(int ac, char **av)
 
 /* 
 iostream	para usar cout
+cctype		para usar toupper
 std::cout	imprime no standard output
 std::toupper comportamento indefinido se negativo
-cctype		para usar toupper
 static_cast	para converter tipos
 */
