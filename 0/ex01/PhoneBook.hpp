@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:45 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/19 13:10:43 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/19 14:04:39 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include <string>
 #include <iostream>
 #include <cstdlib>
 #include <cctype>

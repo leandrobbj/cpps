@@ -6,13 +6,14 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:42:34 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/19 13:11:05 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/19 14:04:56 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
+#include <string>
 #include <iostream>
 #include <cstdlib>
 
