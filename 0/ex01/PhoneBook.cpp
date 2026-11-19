@@ -6,18 +6,20 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:30 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/13 16:46:29 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/19 13:10:39 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(): oldest(0), entries(0), contacts(){
+PhoneBook::PhoneBook(): oldest(0), entries(0)
+{
 	if (TEST)
 		std::cout << "<PhoneBook constructor>\n";
 }
 
-PhoneBook::~PhoneBook(){
+PhoneBook::~PhoneBook()
+{
 	if (TEST)
 		std::cout << "\n<PhoneBook destructor>\n";
 }
@@ -25,7 +27,8 @@ PhoneBook::~PhoneBook(){
 static std::string strInput(std::string str);
 static std::string strFit(std::string str);
 
-void PhoneBook::add() {
+void PhoneBook::add()
+{
 	std::string info[5];
 	info[0] = strInput("\nFirst Name: ");
 	info[1] = strInput("Last Name: ");
@@ -50,7 +53,8 @@ void PhoneBook::search()
 	printContact();
 }
 
-void PhoneBook::printAll() {
+void PhoneBook::printAll()
+{
 	int	i = 0;
 	std::cout << "                                  PhoneBook\n";
 	std::cout << "———————————————————————————————————————————\n";
@@ -67,7 +71,8 @@ void PhoneBook::printAll() {
 	std::cout << "———————————————————————————————————————————\n";
 }
 
-void PhoneBook::printContact() {
+void PhoneBook::printContact()
+{
 	std::string	input;
 	while (true)
 	{
@@ -89,12 +94,14 @@ void PhoneBook::printContact() {
 	std::cout << "Dark Secret: " << contacts[i].getSecret() << '\n';
 }
 
-void PhoneBook::printEntries(){
+void PhoneBook::printEntries()
+{
 	std::cout << "\nEntries: " << entries << "\n";
 	std::cout << "Older index: " << oldest << "\n";
 }
 
-void PhoneBook::fill() {
+void PhoneBook::fill()
+{
 	std::string info[5];
 	info[0] = "Ana";
 	info[1] = "Silva";
@@ -163,7 +170,8 @@ static std::string strInput(std::string str)
 	}
 }
 
-static std::string strFit(std::string str) {
+static std::string strFit(std::string str)
+{
 	if (str.size() > 10)
 		return str.substr(0, 9) + '.';
 	return str;

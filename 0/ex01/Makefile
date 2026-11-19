@@ -6,27 +6,27 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/05 14:44:44 by lbraga            #+#    #+#              #
-#    Updated: 2026/11/13 15:49:54 by lbraga           ###   ########.fr        #
+#    Updated: 2026/11/19 13:10:32 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= phonebook
-HEADERS	= PhoneBook.hpp Contact.hpp
-CXX		= c++
-CFLAGS	= -Wall -Werror -Wextra -std=c++98
-SRC		= main.cpp PhoneBook.cpp Contact.cpp
-OBJS = $(SRC:%.cpp=obj/%.o)
+NAME		= phonebook
+HEADERS		= PhoneBook.hpp Contact.hpp
+CXX			= c++
+CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
+SRC			= main.cpp PhoneBook.cpp Contact.cpp
+OBJS		= $(SRC:%.cpp=obj/%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CXX) $(CFLAGS) $(OBJS) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 	@echo "* $(NAME) compiled"
 
 obj/%.o: %.cpp $(HEADERS)
 	@mkdir -p $(@D)
 	@echo "* compiling $<"
-	@$(CXX) $(CFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	@rm -rf obj
@@ -38,4 +38,13 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+test: CXXFLAGS += -DTEST=1
+test: re
+
+run: $(NAME)
+	./$(NAME)
+
+val:
+	valgrind ./$(NAME)
+
+.PHONY: all clean fclean re test run val

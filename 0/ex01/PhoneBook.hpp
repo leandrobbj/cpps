@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:45 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/13 16:48:57 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/19 13:10:43 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,18 @@
 #include <cctype>
 #include <iomanip>
 
-# define TEST 0
+# ifndef TEST
+#  define TEST 0
+# endif
 
-class PhoneBook {
+class PhoneBook
+{
 	private:
 		int		oldest;
 		int		entries;
 		Contact	contacts[8];
-		void printAll();
-		void printContact();
+		void	printAll();
+		void	printContact();
 	public:
 		PhoneBook();
 		~PhoneBook();

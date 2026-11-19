@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:45 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/13 14:40:19 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/19 13:10:03 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include <string>
 #include <iostream>
 
-class Contact {
+class Contact
+{
 	private:
 		std::string first;
 		std::string last;

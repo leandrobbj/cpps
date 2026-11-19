@@ -6,19 +6,22 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:30 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/13 15:46:00 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/19 13:09:54 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Contact.hpp"
 
-Contact::Contact(){
+Contact::Contact()
+{
 }
 
-Contact::~Contact(){
+Contact::~Contact()
+{
 }
 
-void Contact::create(std::string info[5]){
+void Contact::create(std::string info[5])
+{
 	this->first = info[0];
 	this->last = info[1];
 	this->nick = info[2];
@@ -26,22 +29,27 @@ void Contact::create(std::string info[5]){
 	this->secret = info[4];
 }
 
-std::string Contact::getFirst(){
+std::string Contact::getFirst()
+{
 	return this->first;
 }
 
-std::string Contact::getLast(){
+std::string Contact::getLast()
+{
 	return this->last;
 }
 
-std::string Contact::getNick(){
+std::string Contact::getNick()
+{
 	return this->nick;
 }
 
-std::string Contact::getNumber(){
+std::string Contact::getNumber()
+{
 	return this->number;
 }
 
-std::string Contact::getSecret(){
+std::string Contact::getSecret()
+{
 	return this->secret;
 }
