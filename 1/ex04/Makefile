@@ -6,11 +6,11 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/05 14:44:44 by lbraga            #+#    #+#              #
-#    Updated: 2026/11/20 06:39:44 by lbraga           ###   ########.fr        #
+#    Updated: 2026/11/20 15:01:24 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= streameditor
+NAME		= streamEditor
 HEADERS		= src/StreamEditor.hpp
 CXX			= c++
 CXXFLAGS	= -Wall -Werror -Wextra -std=c++98

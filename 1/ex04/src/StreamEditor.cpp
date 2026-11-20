@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 05:23:37 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 07:13:01 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 14:50:46 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ void StreamEditor::replaceString()
 
 bool printError(std::string str)
 {
-	std::cerr << C_RED << str << C_RESET << std::endl;
+	std::cerr << C_RED << str << C_RESET << '\n';
 	return false;
 }

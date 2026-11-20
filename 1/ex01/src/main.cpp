@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 14:52:38 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 14:22:49 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 14:54:37 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ int main(void)
 	if (!strInput("Horde name: ", name))
 			return 0;
 	horde = zombieHorde(N, name);
-	std::cout << C_GREEN << std::endl;
+	std::cout << C_GREEN;
 	for (int i = 0; i < N; i++)
 		horde[i].announce();
-	std::cout << C_RED << std::endl;
+	std::cout << C_RED;
 	delete[] horde;
-	std::cout << C_RESET << std::endl;
+	std::cout << C_RESET;
 	return 0;
 }
 
@@ -55,7 +55,7 @@ static bool nbrInput(std::string str, int& N)
 		N = std::strtol(nbr.c_str(), &end, 10);
 		if (*end != '\0' || N < 1)
 		{
-			std::cout << C_RED << "error: no natural numbers" << C_RESET << std::endl;
+			std::cout << C_RED << "error: no natural numbers" << C_RESET << '\n';
 			continue;
 		}
 		else if (N > 50)

@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 14:52:38 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 14:07:49 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 14:53:54 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ int main(void)
 	
 	Zombie* zombie1 = newZombie(zombie[0]);
 	Zombie* zombie2 = newZombie(zombie[1]);
-	std::cout << C_MAGENTA << std::endl;
+	std::cout << C_MAGENTA;
 	randomChump(zombie[2]);
-	std::cout << C_GREEN << std::endl;
+	std::cout << C_GREEN;
 	randomChump(zombie[3]);
-	std::cout << C_CIAN << std::endl;
+	std::cout << C_CIAN;
 	delete zombie1;
-	std::cout << C_RESET << std::endl;
+	std::cout << C_RESET;
 	delete zombie2;
 	return 0;
 }

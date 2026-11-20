@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:42:34 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 14:25:21 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 14:54:26 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 #include <iostream>
 #include <cstdlib>
 
-# define C_RESET	"\033[0m"
-# define C_RED		"\033[31m"
-# define C_GREEN	"\033[32m"
+# define C_RESET	"\033[0m\n"
+# define C_RED		"\033[31m\n"
+# define C_GREEN	"\033[32m\n"
 
 class Zombie
 {

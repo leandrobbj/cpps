@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 11:40:44 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 12:41:56 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 14:56:53 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int	main(void)
 	std::string level;
 	Harl harl;
 	
-	std::cout << "\n——————————————————————————————————————\n";
+	std::cout << "——————————————————————————————————————\n";
 	std::cout << "  ———————————  Harl 2.0  ———————————  \n";
 	std::cout << "——————————————————————————————————————\n";
 	while(true)
 	{
-		if (!strInput("\nDEBUG | INFO | WARNING | ERROR | EXIT \n", level)
+		if (!strInput("DEBUG | INFO | WARNING | ERROR | EXIT \n>", level)
 			|| level == "EXIT")
 			break;
 		else

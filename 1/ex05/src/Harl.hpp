@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 11:40:51 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 12:30:35 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 15:11:46 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Harl
 		void error(void);
 	public:
 		Harl();
-		void complain(std::string level);
+		void complain(std::string& level);
 };
 
 #endif
