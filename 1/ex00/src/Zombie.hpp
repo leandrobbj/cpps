@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:42:34 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/19 14:04:56 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 13:51:35 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <string>
 #include <iostream>
-#include <cstdlib>
 
 # define C_RESET	"\033[0m"
 # define C_GREEN	"\033[32m"

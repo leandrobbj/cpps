@@ -6,7 +6,7 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/05 14:44:44 by lbraga            #+#    #+#              #
-#    Updated: 2026/11/19 13:10:32 by lbraga           ###   ########.fr        #
+#    Updated: 2026/11/20 14:19:44 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,13 +38,13 @@ fclean: clean
 
 re: fclean all
 
-test: CXXFLAGS += -DTEST=1
-test: re
-
 run: $(NAME)
 	./$(NAME)
 
 val:
 	valgrind ./$(NAME)
 
-.PHONY: all clean fclean re test run val
+test: CXXFLAGS += -DTEST=1
+test: re val
+
+.PHONY: all clean fclean re run val test 

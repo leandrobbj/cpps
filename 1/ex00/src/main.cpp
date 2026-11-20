@@ -6,36 +6,44 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 14:52:38 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/19 13:08:39 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 14:07:49 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-static std::string strInput(std::string str);
+static bool strInput(std::string str, std::string& input);
 
-int main()
+int main(void)
 {
-	Zombie* zombie1 = newZombie(strInput("Name newZombie1: "));
-	std::cout << C_GREEN << std::endl;
-	Zombie* zombie2 = newZombie(strInput("Name newZombie2: "));
-	std::cout << C_CIAN << std::endl;
-	randomChump(strInput("Name randomChump1: "));
+	std::string zombie[4];
+	std::string string[4] = {
+		"Name newZombie1: ",
+		"Name newZombie2: ",
+		"Name randomChump1: ",
+		"Name randomChump2: ",
+	};
+	for (int i = 0; i < 4; i++)
+		if (!strInput(string[i], zombie[i]))
+			return 0;
+	
+	Zombie* zombie1 = newZombie(zombie[0]);
+	Zombie* zombie2 = newZombie(zombie[1]);
 	std::cout << C_MAGENTA << std::endl;
-	randomChump(strInput("Name randomChump2: "));
-	std::cout << C_RESET << std::endl;
-	delete zombie1;
+	randomChump(zombie[2]);
 	std::cout << C_GREEN << std::endl;
-	delete zombie2;
+	randomChump(zombie[3]);
+	std::cout << C_CIAN << std::endl;
+	delete zombie1;
 	std::cout << C_RESET << std::endl;
+	delete zombie2;
 	return 0;
 }
 
-static std::string strInput(std::string str)
+static bool strInput(std::string str, std::string& input)
 {
-	std::string input = "";
 	std::cout << str;
 	if (!std::getline(std::cin, input))
-		exit (0);
-	return input;
+		return false;
+	return true;
 }

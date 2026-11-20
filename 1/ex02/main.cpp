@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:11:12 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/19 21:07:30 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 14:02:56 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # define C_MAGENTA	"\033[35m"
 # define C_CIAN		"\033[36m"
 
-int main()
+int main(void)
 {
 	std::string		string = "HI THIS IS BRAIN";
 	std::string*	stringPTR = &string;
