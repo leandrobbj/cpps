@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:42:34 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/19 14:10:14 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/19 21:06:42 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
 # define C_RESET	"\033[0m"
 # define C_RED		"\033[31m"
 # define C_GREEN	"\033[32m"
-# define C_MAGENTA	"\033[35m"
-# define C_CIAN		"\033[36m"
 
 class Zombie
 {

@@ -6,7 +6,7 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/05 14:44:44 by lbraga            #+#    #+#              #
-#    Updated: 2026/11/19 16:42:23 by lbraga           ###   ########.fr        #
+#    Updated: 2026/11/19 21:08:05 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,4 +40,7 @@ re: fclean all
 run: $(NAME)
 	./$(NAME)
 
-.PHONY: all clean fclean re run
+val: $(NAME)
+	valgrind ./$(NAME)
+
+.PHONY: all clean fclean re run val

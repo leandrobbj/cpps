@@ -6,11 +6,11 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/05 14:44:44 by lbraga            #+#    #+#              #
-#    Updated: 2026/11/19 16:39:54 by lbraga           ###   ########.fr        #
+#    Updated: 2026/11/19 22:08:16 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= weapon
+NAME		= weapons
 HEADERS		= src/HumanA.hpp src/HumanB.hpp src/Weapon.hpp
 CXX			= c++
 CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
