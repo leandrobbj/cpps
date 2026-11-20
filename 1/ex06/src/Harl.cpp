@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 11:40:58 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 16:19:26 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 16:42:08 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	Harl::error(void)
 	std::cout << "This is unacceptable! I want to speak to the manager now.\n\n";
 }
 
-void	Harl::filter(std::string& level)
+void	Harl::filter(std::string level)
 {
 	void (Harl::*functions[4])(void) = {
 		&Harl::debug,

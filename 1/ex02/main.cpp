@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:11:12 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 14:02:56 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 16:34:27 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(void)
 	
 	std::cout << C_CIAN << string << "<- string value" << '\n';
 	std::cout << C_GREEN << *stringPTR << "<- value pointed by stringPTR" << '\n';
-	std::cout << C_MAGENTA << stringREF << "<- value pointed by stringPTR" << '\n';
+	std::cout << C_MAGENTA << stringREF << "<- value referenced by stringREF" << '\n';
 	std::cout << C_RESET;
 	return 0;
 }

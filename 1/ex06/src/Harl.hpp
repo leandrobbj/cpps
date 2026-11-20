@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 11:40:51 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 15:13:55 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 16:42:03 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARLHPP
+#ifndef HARL_HPP
 # define HARL_HPP
 
 #include <string>
@@ -26,7 +26,7 @@ class Harl
 		void error(void);
 	public:
 		Harl();
-		void filter(std::string& level);
+		void filter(std::string level);
 };
 
 #endif

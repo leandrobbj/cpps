@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 14:52:38 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 14:53:54 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 16:30:42 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,13 @@ int main(void)
 	for (int i = 0; i < 4; i++)
 		if (!strInput(string[i], zombie[i]))
 			return 0;
-	
+
 	Zombie* zombie1 = newZombie(zombie[0]);
 	Zombie* zombie2 = newZombie(zombie[1]);
+	std::cout << C_CIAN;
+	zombie1->announce();
+	std::cout << C_RESET;
+	zombie2->announce();
 	std::cout << C_MAGENTA;
 	randomChump(zombie[2]);
 	std::cout << C_GREEN;

@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 11:40:58 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 15:13:05 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/20 16:38:26 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	Harl::error(void)
 	std::cout << "This is unacceptable! I want to speak to the manager now.\n\n";
 }
 
-void	Harl::complain(std::string& level)
+void	Harl::complain(std::string level)
 {
 	void (Harl::*functions[4])(void) = {
 		&Harl::debug,
@@ -61,6 +61,6 @@ void	Harl::complain(std::string& level)
 			return;
 		}
 	}
-	std::cout << "error: invalid parameter";
+	std::cout << "error: invalid parameter\n";
 }
 
