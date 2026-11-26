@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 13:42:34 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/20 14:54:05 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/26 14:02:19 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,6 @@ Zombie*	newZombie(std::string name);
 void	randomChump(std::string name);
 
 #endif
+
+devo remover VOID
+mudar cores para main

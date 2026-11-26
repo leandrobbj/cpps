@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 01:01:45 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/19 14:04:39 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/23 15:34:32 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 #include <cstdlib>
 #include <cctype>
 #include <iomanip>
+
+remover exit, fazer trim e limitar espacos em branco
 
 # ifndef TEST
 #  define TEST 0
