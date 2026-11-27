@@ -6,13 +6,14 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 02:52:51 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/26 16:35:29 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/27 16:55:52 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
 #include <cmath>
+#include <cstdint>
 
 const int Fixed::_fract = 8;
 
@@ -99,9 +100,7 @@ bool Fixed::operator!=(Fixed const& ref) const {
 	return (false);
 }
 
-
 // Arithmetic operators
-
 
 Fixed Fixed::operator+(Fixed const& term) const {
 	Fixed res(*this);
@@ -116,37 +115,79 @@ Fixed Fixed::operator-(Fixed const& term) const {
 }
 
 Fixed Fixed::operator*(Fixed const& term) const {
-	Fixed res(*this);
-	res._bits *= term._bits;
+	Fixed res;
+	int64_t tmp = static_cast<int64_t>(_bits) * term._bits;
+	res._bits = static_cast<int>(tmp >> _fract);
 	return (res);
 }
 
-
-
-Fixed	Fixed::operator*(Fixed const & b) const
-{
-	Fixed	result(*this);
-
-	result.fpValue = (static_cast<int64_t>(result.fpValue) *  b.fpValue) / (1 << this->bits);
-	return (result);
+Fixed Fixed::operator/(Fixed const& term) const {
+	Fixed res;
+	int64_t tmp = static_cast<int64_t>(_bits) * (1 << _fract);
+	res._bits = static_cast<int>(tmp / term._bits);
+	return (res);
 }
 
-Fixed	Fixed::operator/(Fixed const & b) const
-{
-	Fixed	result(*this);
+// Unary Operators
 
-	result.fpValue = (static_cast<int64_t>(result.fpValue) * (1 << this->bits)) /  b.fpValue;
-	return (result);
+/* Fixed	&Fixed::operator++()
+{
+	this->fpValue = this->fpValue + 1;
+	return (*this);
 }
 
+Fixed	Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+	this->fpValue = this->fpValue + 1;
+	return(tmp);
+}
 
+Fixed	&Fixed::operator--()
+{
+	this->fpValue = this->fpValue - 1;
+	return (*this);
+}
 
+Fixed	Fixed::operator--(int)
+{
+	Fixed tmp(*this);
+	this->fpValue = this->fpValue - 1;
+	return(tmp);
+}
 
+Fixed	&Fixed::min(Fixed &first, Fixed &second)
+{
+	if (first < second)
+		return (first);
+	else
+		return (second);
+}
 
+const Fixed	&Fixed::min(Fixed const &first, Fixed const &second)
+{
+	if (first < second)
+		return (first);
+	else
+		return (second);
 
+}
 
+Fixed	&Fixed::max(Fixed &first, Fixed &second)
+{
+	if (first > second)
+		return (first);
+	else
+		return (second);
+}
 
-
+const Fixed	&Fixed::max(Fixed const &first, Fixed const &second)
+{
+	if (first > second)
+		return (first);
+	else
+		return (second);
+} */
 
 
 
