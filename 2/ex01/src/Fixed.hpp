@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 02:52:35 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/26 15:49:14 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/28 13:09:31 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class Fixed
 		static const int	_fract;
 	public:
 		Fixed();
+		Fixed(const Fixed& copy);
 		Fixed(const int val);
 		Fixed(const float val);
-		Fixed(const Fixed& copy);
 		Fixed& operator=(const Fixed& copy);
 		~Fixed();
 		int		getRawBits() const;

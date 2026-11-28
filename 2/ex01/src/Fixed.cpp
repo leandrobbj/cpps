@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 02:52:51 by lbraga            #+#    #+#             */
-/*   Updated: 2026/11/26 15:20:12 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/11/28 13:19:50 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ Fixed::Fixed() : _bits(0) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
+Fixed::Fixed(const Fixed& copy) {
+	std::cout << "Copy constructor called" << std::endl;
+	*this = copy;
+}
+
 Fixed::Fixed(const int val): _bits(val << _fract) {
 	std::cout << "Int constructor called" << std::endl;
 }
@@ -29,16 +34,11 @@ Fixed::Fixed(const float val) {
 	_bits = static_cast<int>(roundf(val * (1 << _fract)));
 }
 
-Fixed::Fixed(const Fixed& copy) {
-	std::cout << "Copy constructor called" << std::endl;
-	*this = copy;
-}
-
 Fixed& Fixed::operator=(const Fixed& copy) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy)
 		_bits = copy.getRawBits();
-	return *this;
+	return (*this);
 }
 
 Fixed::~Fixed() {
@@ -46,7 +46,7 @@ Fixed::~Fixed() {
 }
 
 int Fixed::getRawBits() const {
-	return _bits;
+	return (_bits);
 }
 
 void Fixed::setRawBits(int const raw) {
@@ -54,13 +54,13 @@ void Fixed::setRawBits(int const raw) {
 }
 
 int Fixed::toInt() const{
-	return _bits >> _fract;
+	return (_bits >> _fract);
 }
 
 float Fixed::toFloat() const {
-	return static_cast<float>(_bits) / static_cast<float>(1 << _fract);
+	return (static_cast<float>(_bits) / static_cast<float>(1 << _fract));
 }
 
 std::ostream& operator<<(std::ostream& output, Fixed const& val) {
-	return output << val.toFloat();
+	return (output << val.toFloat());
 }
